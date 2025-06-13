@@ -13,9 +13,17 @@ app.post("/user/signin" , (req,res)=>{
     
 })
 
-app.post("/buycouse" , (req , res)=>{
+app.get("/courses" , (req , res)=>{
     
 })
+app.post("/courses/buy",(req,res)=>{
+
+})
+
+app.get("/user/bought", (req,res)=>{
+
+} )
+
 app.listen(port,()=>{
     console.log(`Server is running on http://localhost:${port}`);
 })
