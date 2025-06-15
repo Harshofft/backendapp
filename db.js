@@ -1,9 +1,8 @@
 const mongooes = require("mongoose")
 const Schema = mongooes.Schema
 const objectId = Schema.ObjectId
+// const objectId = mongooes.Types.objectId
 
-mongooes.connect()
-//user schema defined
 const userSchema = new Schema({
     email : {type:String ,unique:true},
     password: String,
@@ -32,9 +31,9 @@ const purchaseSchema = new Schema({
 })
 
 const userModel = mongooes.model("user",userSchema)
-const adminModel = mongooes.model("user",adminSchema)
-const courseModel = mongooes.model("user",courseSchema)
-const purchaseModel = mongooes.model("user",purchaseSchema)
+const adminModel = mongooes.model("admin",adminSchema)
+const courseModel = mongooes.model("course",courseSchema)
+const purchaseModel = mongooes.model("purchase",purchaseSchema)
 
 module.exports ={
     userModel:userModel,
