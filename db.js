@@ -2,6 +2,8 @@ const mongooes = require("mongoose")
 const Schema = mongooes.Schema
 const objectId = Schema.ObjectId
 
+mongooes.connect()
+//user schema defined
 const userSchema = new Schema({
     email : {type:String ,unique:true},
     password: String,
